@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>
+            散件计算器
+        </title>
+        <link rel="stylesheet" type="text/css" href="css/personal.css">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    </head>
+    <body>
+        <header>
+            <div class="p-5 text-center bg-light header">
+                <h1 class="mb-3">散件计算器</h1>
+            </div>
+        </header>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3" >
+                    <div class="label">
+                        副本选择
+                    </div>
+                    <div id="scenario" class="wrapper-dropdown-3">
+                        <span>武狱黒牢(6首领)</span>
+                        <ul class="dropdown">
+                            <li><a href="#">河阳之战(5首领)</a></li>
+                            <li><a href="#">武狱黒牢(6首领)</a></li>
+                            <li><a href="#">白帝江关(7首领)</a></li>
+                            <li><a href="#">敖夜二连(11首领)</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="label">
+                        共战增益
+                    </div>
+                    <div id="gongzhan" class="wrapper-dropdown-3">
+                        <span>无共战</span>
+                        <ul class="dropdown">
+                            <li><a href="#">无共战</a></li>
+                            <li><a href="#">有共战</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="label">
+                        一号首领掉落
+                    </div>
+                    <div id="boss1" class="wrapper-dropdown-3">
+                        <span>三级五彩石x2</span>
+                        <ul class="dropdown">
+                            <li><a href="#">三级五彩石x2</a></li>
+                            <li><a href="#">三级+六级</a></li>
+                            <li><a href="#">六级五行石x2</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="label">
+                        赛季末加速
+                    </div>
+                    <div id="endofseason" class="wrapper-dropdown-3">
+                        <span>无加速</span>
+                        <ul class="dropdown">
+                            <li><a href="#">无加速</a></li>
+                            <li><a href="#">有加速</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="label">
+                        特殊材料掉落
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="label">
+                        <input id="sp1" type="checkbox" name="special_material" value="0">周常副本(茶饼)
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="label">
+                        <input id="sp2" type="checkbox" name="special_material" value="0">武狱黑牢关底宝箱
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="label">
+                        <input id="sp3" type="checkbox" name="special_material" value="0">雷域大泽桑叶盒
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="label">材料价格</div>
+                    <div class="text-center">
+                        <label class="label fixed-with"> 三级五行石 </label>
+                        <input  id="price3" class="price-input" type="text" value="15"/>
+                    </div>
+                    <div class="text-center">
+                        <label class="label fixed-with"> 四级五彩石</label>
+                        <input  id="price4" class="price-input" type="text" value="175"/>
+                    </div>
+                    <div class="text-center">
+                        <label class="label fixed-with"> 六级五行石</label>
+                        <input id="price6" class="price-input" type="text" value="520"/>
+                    </div>
+                    <div class="label">特殊材料价格</div>
+                    <div class="text-center hidden">
+                        <label class="label fixed-with"> 茶饼</label>
+                        <input id="pricetea" class="price-input" type="text" value="450"/>
+                    </div>
+                    <div class="text-center hidden">
+                        <label class="label fixed-with"> 维峰丹</label>
+                        <input id="priceelixir" class="price-input" type="text" value="75"/>
+                    </div>
+                    <div class="text-center hidden">
+                        <label class="label fixed-with"> 桑叶嫩芽盒</label>
+                        <input id="pricemulberry_sm" class="price-input" type="text" value="20"/>
+                    </div>
+                    <div class="text-center hidden">
+                        <label class="label fixed-with"> 黄桑叶盒</label>
+                        <input id="pricemulberry_md" class="price-input" type="text" value="60"/>
+                    </div>
+                    <div class="text-center">
+                        <button id="calculate" type="button" class="btn">计算</button>
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <div class="label">计算结果</div>
+                    <div id="results"></div>
+                </div>
+            </div>
+        </div>
+        
+        <script src="js/jquery-3.3.1.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <!-- <script src="js/cursor.js"></script> -->
+        <script src="js/main.js"></script>
+    </body>
+</html>
