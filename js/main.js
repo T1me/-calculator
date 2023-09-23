@@ -161,7 +161,21 @@ function output(el,res){
         $row.append($("<div class='tbelement'>"+avg_losses[i].toFixed(2)+"</div>"));
         el.append($row);
     }
-    
+
+}
+
+function load_prices(){
+    for(var i = 0; i < localStorage.length; i++){
+        var key = localStorage.key(i);
+        var id = "#" + key
+        $(id).val(localStorage.getItem(key))
+    }
+}
+
+function save_prices(prices_input){
+    for(var key in prices_input){
+        localStorage.setItem(key, prices_input[key])
+    }
 }
 
 $(function(){
@@ -169,6 +183,7 @@ $(function(){
     var gongzhan = new DropDown($('#gongzhan'));
     var boss1 = new DropDown($('#boss1'));
     var endofseason = new DropDown($('#endofseason'));
+    load_prices();
     $(document).click(function(){
         $('.wrapper-dropdown-3').removeClass('active');
     })
@@ -248,5 +263,15 @@ $(function(){
         var vals = res[1];
         res = cal_price_tb(probs,vals);
         output($("#results"),res);
+        var prices_input = {
+            price3: price3,
+            price4: price4,
+            price6: price6,
+            pricetea: pricetea,
+            priceelixir: priceelixir,
+            pricemulberry_sm: pricemulberry_sm,
+            pricemulberry_md: pricemulberry_md
+        };
+        save_prices(prices_input);
     })
 });
